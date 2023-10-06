@@ -1,0 +1,17 @@
+---
+// bg-gradient-to-r from-black from-10% to-[#01ccff]
+---
+
+<div class="w-1/4 h-fit">
+  <ul class="p-4 rounded-lg m-1">
+    {
+      ["Personal Details", "Experience", "Education", "Projects", "Skill"].map(
+        (section, i) => (
+          <li class="p-2 rounded-full text-center ">
+            <a href={`/${i === 0 ? "" : section}`}>{section}</a>
+          </li>
+        )
+      )
+    }
+  </ul>
+</div>

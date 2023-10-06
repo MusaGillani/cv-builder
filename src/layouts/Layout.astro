@@ -1,0 +1,29 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Template from "../components/Template";
+// import Builder from "../components/Builder";
+import Sidebar from './Sidebar.astro'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
+    <title>Resume Builder</title>
+  </head>
+  <body>
+    <h1 class="text-center text-xl m-5">Resume Builder</h1>
+    <div class="flex justify-around w-full">
+      <div class="w-1/2 flex bg-[#EFEFEF] py-2">
+          <Sidebar />  
+        <slot />
+      </div>
+      <div class="w-1/2 ">
+        <Template />
+      </div>
+    </div>
+  </body>
+</html>
